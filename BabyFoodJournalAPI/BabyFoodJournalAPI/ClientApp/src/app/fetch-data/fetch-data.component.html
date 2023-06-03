@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!foodEntries"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="foodEntries">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Notes</th>
+      <th>FoodEntry</th>
+      <th>CreatedAt</th>
+      <th>UpdatedAt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let foodEntry of foodEntries">
+      <td>{{ foodEntry.date }}</td>
+      <td>{{ foodEntry.notes }}</td>
+      <td>{{ foodEntry.foodEntry }}</td>
+      <td>{{ foodEntry.createdAt }}</td>
+      <td>{{ foodEntry.updatedAt }}</td>
+    </tr>
+  </tbody>
+</table>
